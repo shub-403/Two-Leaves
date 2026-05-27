@@ -1,0 +1,145 @@
+/* ====== Font Faces Start ====== */
+@font-face {
+    font-family: Reckless;
+    src: url(Fonts/RecklessCondensedS-TRIAL-Book.woff);
+}
+
+@font-face {
+    font-family: Figtree;
+    src: url(Fonts/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2);
+}
+
+@font-face {
+    font-family: Midnight; /* Heading Font */
+    src: url(Fonts/midnight-sans-rd-12-medium-trial.otf);
+}
+
+@font-face {
+    font-family: Roboto-Mono;
+    src: url(Fonts/RobotoMono-Medium.ttf);
+}
+
+/* ====== Font Faces End ====== */
+
+a , button, li{
+    cursor: pointer;
+}
+
+button , p{
+    font-family: Figtree;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Midnight;
+}
+
+:root {
+    /* Colors */
+    --222222: #222222;
+    --333333: #333333;
+    --444444: #444444;
+    --676767: #676767;
+    --000000: #000000;
+    --0A0A0A: #0A0A0A;
+    --6AC337: #6AC337;
+    --73BC25: #73BC25;
+    --87C00D: #87C00D;
+    --8A8A8A: #8A8A8A;
+    --8BC045: #8BC045;
+    --8B5A31: #8B5A31;
+    --A2C9FC: #A2C9FC;
+    --A4CFD7: #A4CFD7;
+    --ABDF74: #ABDF74;
+    --ABED78: #ABED78;
+    --ADE674: #ADE674;
+    --product-bg-9: #AEE0F9;
+    --product-bg-3: #B0E8C1;
+    --light-blue: #C0DBFF;
+    --product-bg-5: #C0E571;
+    --product-bg-4: #C1E4F8;
+    --light-green: #C1EE91;
+    --C3C3C3: #C3C3C3;
+    --dark-purple: #C790DB;
+    --C8E892: #C8E892;
+    --CC0000: #CC0000;
+    --light-gray: #CCCCCC;
+    --product-bg-8: #CCE3FF;
+    --D9C2E1: #D9C2E1;
+    --light-purple: #DAAEEA;
+    --multiple-btn: #DAEAFF;
+    --light-orange: #E8AA63;
+    --dark-orange: #EA6D44;
+    --ECF5DB: #ECF5DB;
+    --EFF7ED: #EFF7ED;
+    --F09F54: #F09F54;
+    --F1F1F1: #F1F1F1;
+    --F26412: #F26412;
+    --F2FCFE: #F2FCFE;
+    --F5AF8A: #F5AF8A;
+    --F7FAEC: #F7FAEC;
+    --products-bg: #FBF9EB;
+    --FDF3F0: #FDF3F0;
+    --orange: #FF7F31;
+    --FFB500: #FFB500;
+    --product-bg-6: #FFCB96;
+    --product-bg-7: #FFD1B8;
+    --FFG265: #FFD265;
+    --product-bg-2: #FFD884;
+    --FFDAB3: #FFDAB3;
+    --FFFEFB: #FFFEFB;
+    --FFFFFF: #FFFFFF;
+    --201C1A: #201C1A;
+    --212B36: #212B36;
+    --dark-blue: #2A2857;
+}
+
+.reviews::after,.account>li>a::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.2s ease;
+}
+
+.account>li>a::after{
+    bottom: -40%;
+}
+
+.reviews-li:hover .reviews::after,.account>li:hover a::after{
+    width: 100%;
+}
+
+.navbar-parent{
+    padding: 15px;
+}
+
+.navbar-parent-padding{
+    padding: 0;
+}
+
+
+.carousel-cell {
+    width: 28%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
+
+.products-h1{
+    font-size: clamp(45.0px, calc(8.08px + 3.606vw), 224.42px);
+}
