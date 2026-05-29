@@ -46,17 +46,17 @@ const swiper = new Swiper(".mySwiper", {
       slidesPerView: 3,
     },
 
-    1200:{
-      slidesPerView:3.5
+    1200: {
+      slidesPerView: 3.5,
     },
-    1400:{
-      slidesPerView:4
+    1400: {
+      slidesPerView: 4,
     },
-    1600:{
-      slidesPerView:4.5
+    1600: {
+      slidesPerView: 4.5,
     },
-    1800:{
-      slidesPerView:5.5
+    1800: {
+      slidesPerView: 5.5,
     },
   },
 });
@@ -65,5 +65,48 @@ let typed = new Typed(".auto-type", {
   strings: ["green tea", "black tea", "chai tea", "iced tea", "herbal tea"],
   typeSpeed: 50,
   backSpeed: 50,
-  loop:true
+  loop: true,
+});
+
+// gsap.to("#Origins .animate-text",{
+//   transform:"translateY(-50%)",
+//   scrollTrigger:{
+//     trigger:"#Origins",
+//     scroller:"body",
+//     markers:true,
+//     start:"top 0%",
+//     end:"top 100%",
+//     scrub:3,
+//     pin:true,
+//   }
+// });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".animate-text").forEach((elem) => {
+  gsap.fromTo(
+    elem,
+    { y: 150 },
+    {
+      y: -50,
+
+      scrollTrigger: {
+        trigger: elem,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 2,
+      },
+    },
+  );
+});
+
+gsap.to(".origin-bg", {
+  y: -100,
+
+  scrollTrigger: {
+    trigger: "#Origins",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 2,
+  },
 });
